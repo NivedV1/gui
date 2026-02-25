@@ -1,0 +1,8 @@
+{
+    "cam_res_x": 800,
+    "cam_res_y": 800,
+    "cam_pixel_size": 3.0,
+    "slm_res_x": 800,
+    "slm_res_y": 800,
+    "slm_pixel_size": 8.0
+}
