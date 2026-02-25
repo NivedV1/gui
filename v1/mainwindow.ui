@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1600</width>
+    <height>1200</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_top" stretch="3,1">
+       <item>
+        <layout class="QVBoxLayout" name="algoLayout">
+         <item>
+          <widget class="QLabel" name="labelAlgorithm">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>ALGORITHM</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox">
+           <item>
+            <property name="text">
+             <string>GS</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WGS</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="iterLayout">
+         <item>
+          <widget class="QLabel" name="labelIteration">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>ITERATIONS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+
+      <layout class="QHBoxLayout" name="horizontalLayout_images" stretch="1,1,1">
+
+       <item>
+        <layout class="QVBoxLayout" name="leftImageLayout">
+         <item>
+          <widget class="QLabel" name="titleLeft">
+           <property name="styleSheet">
+            <string notr="true">
+             QLabel {
+               background-color: rgba(0, 0, 0, 50);
+               color: white;
+               font-weight: bold;
+               padding: 4px;
+             }
+            </string>
+           </property>
+           <property name="text">
+            <string>Grid (50 x 50)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QWidget" name="gridPlaceholder">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QLabel" name="coordLeft">
+           <property name="text">
+            <string>Clicked: - , -</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+             QLabel {
+               background-color: rgba(0, 0, 0, 30);
+               color: white;
+               padding: 4px;
+               border-radius: 3px;
+             }
+            </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QVBoxLayout" name="centerImageLayout">
+         <item>
+          <widget class="QLabel" name="titleCenter">
+           <property name="styleSheet">
+            <string notr="true">
+             QLabel {
+               background-color: rgba(0, 0, 0, 50);
+               color: white;
+               font-weight: bold;
+               padding: 4px;
+             }
+            </string>
+           </property>
+           <property name="text">
+            <string>Center Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="switchButton">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed"/>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+             QPushButton {
+               background-color: rgba(0, 0, 0, 50);
+               color: white;
+               border-radius: 6px;
+               padding: 6px;
+             }
+             QPushButton:hover {
+               background-color: rgba(0, 0, 0, 110);
+             }
+            </string>
+           </property>
+           <property name="text">
+            <string>Switch Image</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <layout class="QVBoxLayout" name="rightImageLayout">
+         <item>
+          <widget class="QLabel" name="titleRight">
+           <property name="styleSheet">
+            <string notr="true">
+             QLabel {
+               background-color: rgba(0, 0, 0, 50);
+               color: white;
+               font-weight: bold;
+               padding: 4px;
+             }
+            </string>
+           </property>
+           <property name="text">
+            <string>Right Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="bottomControls" stretch="0,1">
+      <item>
+       <widget class="QPushButton" name="startButton">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+          QPushButton {
+            background-color: rgba(0, 120, 215, 200);
+            color: white;
+            border-radius: 6px;
+            padding: 6px;
+          }
+          QPushButton:disabled {
+            background-color: rgba(120, 120, 120, 150);
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
